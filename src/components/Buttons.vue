@@ -16,6 +16,8 @@
       {{ users }}
     </pre>
 
+    <a class="btn" @click="resourceGet">resource.get</a>
+
   </div>
 </template>
 
@@ -23,7 +25,8 @@
   export default {
     data() {
       return {
-        users: null
+        users: null,
+        resourceUser: this.$resource('user{/id}')
       }
     },
     methods: {
@@ -32,14 +35,20 @@
         this.$http({ url: '/users.json', method: 'GET' }).then(function(response) {
           this.users = response.data
         }, function(response){
-          console.log(response)
           Materialize.toast(`Erro: ${response.status} ${response.statusText}`, 2000)
         })
       },
 
       countUsers: function() {
         Materialize.toast(this.users.length, 2000)
+      },
+
+      resourceGet: function() {
+        this.resourceUser.get({id: 1}).then(function(response){
+          console.log(response)
+        })
       }
+      
     }
   }
 </script>
