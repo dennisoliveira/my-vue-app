@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 
+import Login from './components/Login.vue'
 import HelloWorldRouter from './components/HelloWorldRouter.vue'
 import TestRouter from './components/TestRouter.vue'
 import Card from './components/Card.vue'
@@ -15,10 +16,34 @@ const router = new VueRouter({
   //linkActiveClass: "active",
   linkExactActiveClass: 'active',
   routes: [
-    {path: '/', component: HelloWorldRouter},
-    {path: '/test', component: TestRouter},
-    {path: '/card', component: Card},
-    {path: '/buttons', component: Buttons}
+    {
+      path: '/', 
+      component: HelloWorldRouter
+    },
+    {
+      path: '/login', 
+      component: Login
+    },
+    {
+      path: '/test', 
+      component: TestRouter, 
+      beforeEnter: (to, from, next) => {
+        // Aqui vem o tratamento do login
+        /*if (store.getters.isAuthenticated) {
+          next()
+          return
+        }*/
+        next('/login')
+      }
+    },
+    {
+      path: '/card', 
+      component: Card
+    },
+    {
+      path: '/buttons',
+      component: Buttons
+    }
   ]
 })
 

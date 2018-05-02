@@ -6,6 +6,7 @@
         <router-link tag="li" to="/"><a>Home</a></router-link>
         <router-link tag="li" to="/card"><a>Card</a></router-link>
         <router-link tag="li" to="/buttons"><a>Buttons</a></router-link>
+        <router-link tag="li" to="/test"><a>Test login</a></router-link>
       </ul>
     </div>
   </nav>
