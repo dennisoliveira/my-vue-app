@@ -4,12 +4,19 @@ import VueRouter from 'vue-router'
 
 import HelloWorldRouter from './components/HelloWorldRouter.vue'
 import TestRouter from './components/TestRouter.vue'
+import Card from './components/Card.vue'
+import Buttons from './components/Buttons.vue'
 
+// Injetar dependência
 Vue.use(VueRouter)
+
+// Definir as rotas do sistema
 const router = new VueRouter({
   routes: [
     {path: '/', component: HelloWorldRouter},
-    {path: '/test', component: TestRouter}
+    {path: '/test', component: TestRouter},
+    {path: '/card', component: Card},
+    {path: '/buttons', component: Buttons}
   ]
 })
 
