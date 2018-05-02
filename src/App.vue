@@ -14,6 +14,9 @@
   export default {
     components: {
       AppHeader, AppContent, AppFooter
+    },
+    created: function() {
+      Materialize.toast('Materialize running...', 2000)
     }
   }
 </script>
