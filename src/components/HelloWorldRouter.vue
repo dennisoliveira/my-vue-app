@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
-    <router-view></router-view>
-  </div>
+    <div>
+        Hello World Router
+    </div>
 </template>
 
 <script>
@@ -9,4 +9,6 @@
     
     }
 </script>
+
+
 
