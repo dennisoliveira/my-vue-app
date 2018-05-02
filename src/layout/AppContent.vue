@@ -13,6 +13,7 @@
 <style scoped>
   #content-wrapper {
     padding-top: 10px;
+    padding-bottom: 80px;
   }
 </style>
 

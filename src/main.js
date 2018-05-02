@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
+import VurResource from 'vue-resource'
 
 import Login from './components/Login.vue'
 import HelloWorldRouter from './components/HelloWorldRouter.vue'
@@ -9,6 +10,7 @@ import Card from './components/Card.vue'
 import Buttons from './components/Buttons.vue'
 
 // Injetar dependência
+Vue.use(VurResource)
 Vue.use(VueRouter)
 
 // Definir as rotas do sistema
