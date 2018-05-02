@@ -12,6 +12,8 @@ Vue.use(VueRouter)
 
 // Definir as rotas do sistema
 const router = new VueRouter({
+  //linkActiveClass: "active",
+  linkExactActiveClass: 'active',
   routes: [
     {path: '/', component: HelloWorldRouter},
     {path: '/test', component: TestRouter},
@@ -20,6 +22,7 @@ const router = new VueRouter({
   ]
 })
 
+// Cria a instância da aplicação
 new Vue({
   el: '#app',
   router: router,

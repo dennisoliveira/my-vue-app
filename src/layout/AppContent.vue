@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div id="content-wrapper" class="container">
     <router-view></router-view>
   </div>
 </template>
@@ -9,4 +9,11 @@
     
     }
 </script>
+
+<style scoped>
+  #content-wrapper {
+    padding-top: 10px;
+  }
+</style>
+
 
